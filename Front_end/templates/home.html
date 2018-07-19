@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>HOME</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="adminlogin.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	
+	<script type="text/javascript">
+		function displayImage()
+		{
+			if(this.files && this.files[0])
+			{
+				var obj = new FileReader();
+				obj.onload = function(data){
+					var image = document.getElementById('file');
+					image.src = data.target.result;
+					image.style.display = "block";
+				}
+				obj.readAsDataURL(this.files[0]);
+			}
+		}
+	</script>
+</head>
+
+<body>
+	
+		<div class="container-fluid">
+		<h1 class=" display-2 text-center text-light bg-info" style="margin-top: 10px; background-color: lightblue;">GENDER CLASSIFIER</h1>
+		</div>
+		<div class="container" style="position: relative; margin-top: 60px;">
+
+		<form action="/predict" method="post" enctype = "multipart/form-data">
+			<div class="form-group">
+				<label for="file">Choose an image from system or Upload a file</label>
+				<input type="file" name="myfile" onchange="displayImage.call(this)" class="form-control">
+			</div>
+			
+			<div style="border: 3px solid lightgrey; height: 300px;" class="col-lg-6">
+				<img src="" id="file" name="file" style="display: none;" height="300px">
+			</div>
+			<div class="form-group" style="margin-top: 10px;">
+				
+				<button name="submit" class="btn btn-info">PREDICT</button>
+			</div>
+		</form>
+		<!--<form action = "/predict" method = "post" enctype = "multipart/form-data">
+			<input type = "file" id = "file" name = "file" />
+        	 <input type = "submit" value = "SUBMIT"/>
+            </form>-->
+
+	</div>
+</body>
+</html>
+
