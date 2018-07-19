@@ -1,0 +1,4 @@
+1.Jupyter notebook
+2.Python 3.x
+3.Flask 2.x
+4.Keras (Tensorflow or Theano backend)
