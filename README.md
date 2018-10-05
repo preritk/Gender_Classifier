@@ -7,4 +7,7 @@ The backend is supported by FLASK framework . The website sends request to the p
 
 Just clone the repository and add the path of folder where images are stored in the api.py file.
 ![Test Image 1](ss.png)
+
+And then when you click on predict you get result as: 
+
 ![Test Image 2](sb.png)
