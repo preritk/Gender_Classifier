@@ -6,3 +6,5 @@ The model has been trained using 500 images of female and 500 images of males . 
 The backend is supported by FLASK framework . The website sends request to the pythin script using Flask and then the python script returns the gender of the given image.
 
 Just clone the repository and add the path of folder where images are stored in the api.py file.
+![Test Image 1](ss.png)
+![Test Image 2](sb.png)
